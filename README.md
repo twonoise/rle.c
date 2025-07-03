@@ -5,11 +5,11 @@ DESCRIPTION
 -----------
 Half of century ago, run-length encoding method for (lossless) image compression was the most obvious routine. It offer lowest possible extra RAM usage (often zero, CPU registers were enough), fastest speed, least code size, compatibility and every platform support, even most tiny available.
 
-As the palette sizes grows (EGA, VGA, TrueColor...), it become less efficient; was mostly replaced by _.gif_ format on powerful platforms. While on tiny systems, and especially for simple images like logos and letters, with well limited palette, it still almost only one option.
+As the palette sizes grows (EGA, VGA, TrueColor...), it become less efficient; was mostly replaced by `.gif` format on powerful platforms. While on tiny systems, and especially for simple images like logos and letters, with well limited palette, it still almost only one option.
 
-However, i am wonder why no any simple storage format defined for it yet. There was ancient _.pcx_ format, and while it fits well with top platforms of that era (like 80286), it is too "fat" for low-power CPU like modern 8-bit AVR.
+However, i am wonder why no any simple storage format defined for it yet. There is `.pcx` format, and while it was fitted well with top platforms of that era (like 80286), it is too "fat" for low-power CPU like modern 8-bit AVR.
 
-So this, simplest possible, _.rle_ format was born.
+So this, simplest possible, `.rle` format was born.
 
 It have the intentional property (requirement) that user will write own decoding routine for favorite language and target CPU and memory map: it is simple, and everybody prefer to have own code when it is simple. Usually our C decoder used for reference and tests.
 
@@ -60,7 +60,7 @@ Let's take some middle complexity image.
 
 and `.rle` is **755** bytes.
 
-And it can be noted that, while `.png` and `.gif` are almost can not be (losslessly) compressed even more, but our .rle can be zipped to as tiny as **250** bytes. However, of course, we can't use this benefit, because we can't unzip with ATtiny (at least, should not to plan that). So it is more like fun fact, and somewhat answer to general
+And it can be noted that, while `.png` and `.gif` are almost can not be (losslessly) compressed even more, but our `.rle` can be zipped to as tiny as **250** bytes. However, of course, we can't use this benefit, because we can't unzip with ATtiny (at least, should not to plan that). So it is more like fun fact, and somewhat answer to general
 > Can images be losslessly compressed even more than popular .gif and .png offers?
 
 question.
