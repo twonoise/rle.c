@@ -60,12 +60,15 @@ Let's take some middle complexity image.
 
 and `.rle` is **755** bytes.
 
-And it can be noted that, while .png and .gif are almost can not be (losslessly) compressed even more, but our .rle can be zipped to as tiny as **250** bytes. However, of course, we can't use this benefit, because we can't unzip with ATtiny (at least, should not to plan that). So it is more like fun fact, and somewhat answer to general "Can images be losslessly compressed even more than popular .gif and .png offers?" question.
+And it can be noted that, while `.png` and `.gif` are almost can not be (losslessly) compressed even more, but our .rle can be zipped to as tiny as **250** bytes. However, of course, we can't use this benefit, because we can't unzip with ATtiny (at least, should not to plan that). So it is more like fun fact, and somewhat answer to general
+> Can images be losslessly compressed even more than popular .gif and .png offers?
+
+question.
 
 USAGE
 -----
 
-TBD
+TBD. C code is for GIMP.
 
 
 
