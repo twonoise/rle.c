@@ -13,7 +13,7 @@ So this, simplest possible, `.rle` format was born.
 
 It have the intentional property (requirement) that user will write own decoding routine for favorite language and target CPU and memory map: it is simple, and everybody prefer to have own code when it is simple. Usually our C decoder used for reference and tests.
 
-Format optimized to be effectively used with 8-bit machine instructions.
+Format optimized to be effectively used with 8-bit machine instructions. <br> Note that it will be very fast decompression to videoRAM, even faster than just bare `memcpy` of uncompressed bitmap. Probably it is close to be fastest possible drawing. So it may be worth to use `.rle` even when it gives less compression than `.gif` or `.png`.
 
 We offer mandatory encoder and (optional) decoder for `GIMP`, to make use of this format pleasant. Tested with `GIMP 2.x` family, include up to `2.10.38`.
 
