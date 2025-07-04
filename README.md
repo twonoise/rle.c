@@ -15,7 +15,7 @@ It have the intentional property (requirement) that user will write own decoding
 
 Format optimized to be effectively used with 8-bit machine instructions.
 
-We offer mandatory encoder and (optional) decoder for `GIMP`, to make use of this format pleasant.
+We offer mandatory encoder and (optional) decoder for `GIMP`, to make use of this format pleasant. Tested with `GIMP 2.x` family, include up to `2.10.38`.
 
 Here are specs:
 --------------
@@ -67,13 +67,26 @@ question.
 
 USAGE
 -----
+Our C code offers coder and decoder from (to) `.rle` file using GIMP. It will not run as standalone app. Please let me know if one need command-line coder or decoder.
 
-TBD. C code is for GIMP.
+Our code adds `.rle` format support to GIMP, so allows GIMP to open, save and convert from (to) other formats, like well known `.gif,` `.png`'s.
 
+It should be as simple as
 
+    gimptool-2.0 --install rle.c
 
+Then use `gimp` to work with our test image, or convert other images to `.rle` using `Ctrl+Shift+e` then state `.rle` file extension. Note that user should be familiar with 1-bit or low-bit images, and know exactly what Gimp's `Image - Mode - Indexed - Use 1-bit palette` does, and what is the purpose of it.
 
+CREDITS
+-------
+Our code based on examples from (sorry, the URLs itself are lost with years...):
+Copyright David Neary, 2004; 
+Copyright Nathan Osman, 2012.
 
+LICENSE
+-------
+This instruction manual for `rle.c` is licensed under Creative Commons Attribution 4.0. You are welcome to contribute to the manual in order to improve it so long as your contributions are made available under this same license.
 
+`rle.c` is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
 
-
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
