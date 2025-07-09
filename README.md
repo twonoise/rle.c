@@ -33,7 +33,8 @@ _Transparency_ | Not defined, should be separately handled at decoding, easily o
 _Tolerance to empty Flash ROM_ | Filled with 0xFF's at the beginning or somewhere in the middle of file, meant end of data but not produce decoding overflows etc. That means none of bytes of file can be 0xFF.
 _Stream interrupt_ | Supported and normal (not required to have all pixels to be defined in file).
 
-[Note]: For Gimp, palette considered to be grayscale.
+>[!NOTE]
+>For Gimp, palette considered to be grayscale.
 
 File format:
 -----------
