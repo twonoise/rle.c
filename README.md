@@ -19,17 +19,19 @@ We offer mandatory encoder and (optional) decoder for `GIMP`, to make use of thi
 
 Here are specs:
 --------------
-<tt>_Intended for lowest end CPUs_ with tiny RAM, like ATtiny, ATmega
-_Min image size_:  0
-_Max image size_:  256x256
-_Impossible size_: 255 px width or height (can be forced though)
-_Min colors_:      1+1 (corresponds to bits per pixel (bpp): 1)
-_Max colors_:      16+1 (corresponds to bits per pixel (bpp): ~4) or even more
-_Palette_:         Not defined, should be separately handled at decoding [Note]
-_Transparency_:    Not defined, should be separately handled at decoding, easily obtainable using user's palette support. [Note]
-_Tolerance to empty Flash ROM_. Filled with 0xFF's at the beginning or somewhere in the middle of file, meant end of data but not produce decoding overflows etc. That means none of bytes of file can be 0xFF.
-_Stream interrupt_: Supported and normal (not required to have all pixels to be defined in file).
-</tt>
+
+| _ | _ |
+|------------------|---|
+_Target_ | Lowest end CPUs with tiny RAM, like ATtiny, ATmega 
+_Min image size_ | 0
+_Max image size_ | 256x256
+_Impossible size_ | 255 px width or height (can be forced though)
+_Min colors_ | 1+1 (corresponds to bits per pixel (bpp): 1)
+_Max colors_ | 16+1 (corresponds to bits per pixel (bpp): ~4) or even more
+_Palette_ | Not defined, should be separately handled at decoding [Note]
+_Transparency_ | Not defined, should be separately handled at decoding, easily obtainable using user's palette support. [Note]
+_Tolerance to empty Flash ROM_ | Filled with 0xFF's at the beginning or somewhere in the middle of file, meant end of data but not produce decoding overflows etc. That means none of bytes of file can be 0xFF.
+_Stream interrupt_ | Supported and normal (not required to have all pixels to be defined in file).
 
 [Note]: For Gimp, palette considered to be grayscale.
 
